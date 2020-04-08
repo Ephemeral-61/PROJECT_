@@ -36,9 +36,15 @@ void SHOWMENU()
 //封装添加联系人函数
 //测试添加联系人功能
 
-struct CONTACTS //设计联系人的类
+class CONTACTS //设计联系人的类
 {
 public:
+    CONTACTS()
+    {
+    }
+    ~CONTACTS()
+    {
+    }
     string name;   //contacts adress
     int age;       //contacts age
     int sex;       //1.man 2.woman
@@ -46,9 +52,16 @@ public:
     string adress; //contacts adress
 };
 
-struct ADRESSLIST //设计通讯录的类
+class ADRESSLIST //设计通讯录的类
 {
-    struct CONTACTS personarray[MAX];
+public:
+    ADRESSLIST()
+    {
+    }
+    ~ADRESSLIST()
+    {
+    }
+    CONTACTS personarray[MAX];
     int size; //通讯录中当前记录联系人个数
 };
 
@@ -281,9 +294,6 @@ int main()
     ADRESSLIST abs;
     abs.size = 0;
     //CALL MENU
-    SHOWMENU();
-    system("pause");
-
     cout << "你想做什么" << endl;
 
     //QUIT FUNCTION
@@ -291,6 +301,8 @@ int main()
 
     while (true) //使用循环，用户输入0，直接退出，用户输入其他数字则继续使用，完成功能后重新显示菜单。
     {
+        SHOWMENU();
+
         cin >> select;
         switch (select)
         {

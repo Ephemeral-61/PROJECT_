@@ -45,11 +45,10 @@ public:
     ~CONTACTS()
     {
     }
-    string name;   //contacts adress
-    int age;       //contacts age
-    int sex;       //1.man 2.woman
-    int ph;        //phone number
-    string adress; //contacts adress
+    string name; //contacts adress
+    int age;     //contacts age
+    int sex;     //1.man 2.woman
+    int ph;      //phone number
 };
 
 class ADRESSLIST //设计通讯录的类

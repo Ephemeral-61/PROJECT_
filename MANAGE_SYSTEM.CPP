@@ -165,6 +165,7 @@ int isExist(ADRESSLIST *abs, string name)
             return i; //返回下标
         }
     }
+    return -1;
 }
 
 //要删除联系人1，则让1后的数据向前移动，并且让通讯录中记录的人员个数做-1的操作即可。
